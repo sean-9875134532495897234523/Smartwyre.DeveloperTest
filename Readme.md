@@ -1,26 +1,7 @@
-# Smartwyre Developer Test Instructions
+# Notes
 
-In the 'RebateService.cs' file you will find a method for calculating a rebate. At a high level the steps for calculating a rebate are:
+I spent a lot longer on this in the end, mostly because I decided to focus on the architecture.
 
- 1. Lookup the rebate that the request is being made against.
- 2. Lookup the product that the request is being made against.
- 2. Check that the rebate and request are valid to calculate the incentive type rebate.
- 3. Store the rebate calculation.
+The solution is over-engineered for what it is, but I was trying to show how I would approach the architecture if this was a real world application that I was going to continue to develop in the future.
 
-What we'd like you to do is refactor the code with the following things in mind:
-
- - Adherence to SOLID principles
- - Testability
- - Readability
- - In the future we will add many more incentive types. Determining the incentive type should be made as easy and intuitive as possible for developers who will edit this in the future.
-
-We’d also like you to 
- - Add some unit tests to the Smartwyre.DeveloperTest.Tests project to show how you would test the code that you’ve produced 
- - Run the RebateService from the Smartwyre.DeveloperTest.Runner console application accepting inputs
-
-The only specific 'rules' are:
-
-- The solution should build
-- The tests should all pass
-
-You are free to use any frameworks/NuGet packages that you see fit. You should plan to spend around 1 hour completing the exercise.
+I made the fake db async to show that if you had a real db that had an async api then you would use that.
